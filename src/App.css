@@ -1,38 +1,111 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #181818;
+  color: #d3d3d3;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-card {
+  background-color: #242424;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 300px;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-card img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.movie-card h2 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.movie-card p {
+  font-size: 1rem;
+  margin: 0 0 20px;
+  color: #b3b3b3;
+}
+
+.movie-card .stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.movie-card .stars span {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #e1b12c;
+}
+
+.movie-card .stars input[type="radio"] {
+  display: none;
+}
+
+.review-list {
+  margin-bottom: 20px;
+}
+
+.review {
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}
+
+.review-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.review-form button {
+  background-color: #e1b12c;
+  color: #1e1e1e;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.review-form button:hover {
+  background-color: #d4a017;
 }
